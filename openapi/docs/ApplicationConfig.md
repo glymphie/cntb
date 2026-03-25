@@ -7,12 +7,13 @@ Name | Type | Description | Notes
 **ImageId** | **string** | Image ID | 
 **UserDataId** | **string** | User Data ID | 
 **UserData** | **string** | [Cloud-Init](https://cloud-init.io/) Config in order to customize during start of compute instance. | 
+**MetaData** | [**ApplicationMetaData**](ApplicationMetaData.md) | Metadata of the application configuration | 
 
 ## Methods
 
 ### NewApplicationConfig
 
-`func NewApplicationConfig(imageId string, userDataId string, userData string, ) *ApplicationConfig`
+`func NewApplicationConfig(imageId string, userDataId string, userData string, metaData ApplicationMetaData, ) *ApplicationConfig`
 
 NewApplicationConfig instantiates a new ApplicationConfig object
 This constructor will assign default values to properties that have it defined,
@@ -85,6 +86,26 @@ and a boolean to check if the value has been set.
 `func (o *ApplicationConfig) SetUserData(v string)`
 
 SetUserData sets UserData field to given value.
+
+
+### GetMetaData
+
+`func (o *ApplicationConfig) GetMetaData() ApplicationMetaData`
+
+GetMetaData returns the MetaData field if non-nil, zero value otherwise.
+
+### GetMetaDataOk
+
+`func (o *ApplicationConfig) GetMetaDataOk() (*ApplicationMetaData, bool)`
+
+GetMetaDataOk returns a tuple with the MetaData field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMetaData
+
+`func (o *ApplicationConfig) SetMetaData(v ApplicationMetaData)`
+
+SetMetaData sets MetaData field to given value.
 
 
 

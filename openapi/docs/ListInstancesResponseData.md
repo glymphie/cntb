@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **RegionName** | **string** | The name of the region where the instance is located. | 
 **ProductId** | **string** | Product ID | 
 **ImageId** | **string** | Image&#39;s id | 
-**IpConfig** | [**IpConfig1**](IpConfig1.md) |  | 
+**IpConfig** | [**IpConfig2**](IpConfig2.md) |  | 
 **MacAddress** | **string** | MAC Address | 
 **RamMb** | **float32** | Image RAM size in MB | 
 **CpuCores** | **int64** | CPU core count | 
@@ -33,12 +33,13 @@ Name | Type | Description | Notes
 **ProductType** | **string** | Instance&#39;s category depending on Product Id | 
 **ProductName** | **string** | Instance&#39;s Product Name | 
 **DefaultUser** | Pointer to **string** | Default user name created for login during (re-)installation with administrative privileges. Allowed values for Linux/BSD are &#x60;admin&#x60; (use sudo to apply administrative privileges like root) or &#x60;root&#x60;. Allowed values for Windows are &#x60;admin&#x60; (has administrative privileges like administrator) or &#x60;administrator&#x60;. | [optional] 
+**ApplicationId** | **string** | Application ID | 
 
 ## Methods
 
 ### NewListInstancesResponseData
 
-`func NewListInstancesResponseData(tenantId string, customerId string, additionalIps []AdditionalIp, name string, displayName string, instanceId int64, dataCenter string, region string, regionName string, productId string, imageId string, ipConfig IpConfig1, macAddress string, ramMb float32, cpuCores int64, osType string, diskMb float32, sshKeys []int64, createdDate time.Time, cancelDate string, status InstanceStatus, vHostId int64, vHostNumber int64, vHostName string, addOns []AddOnResponse, productType string, productName string, ) *ListInstancesResponseData`
+`func NewListInstancesResponseData(tenantId string, customerId string, additionalIps []AdditionalIp, name string, displayName string, instanceId int64, dataCenter string, region string, regionName string, productId string, imageId string, ipConfig IpConfig2, macAddress string, ramMb float32, cpuCores int64, osType string, diskMb float32, sshKeys []int64, createdDate time.Time, cancelDate string, status InstanceStatus, vHostId int64, vHostNumber int64, vHostName string, addOns []AddOnResponse, productType string, productName string, applicationId string, ) *ListInstancesResponseData`
 
 NewListInstancesResponseData instantiates a new ListInstancesResponseData object
 This constructor will assign default values to properties that have it defined,
@@ -275,20 +276,20 @@ SetImageId sets ImageId field to given value.
 
 ### GetIpConfig
 
-`func (o *ListInstancesResponseData) GetIpConfig() IpConfig1`
+`func (o *ListInstancesResponseData) GetIpConfig() IpConfig2`
 
 GetIpConfig returns the IpConfig field if non-nil, zero value otherwise.
 
 ### GetIpConfigOk
 
-`func (o *ListInstancesResponseData) GetIpConfigOk() (*IpConfig1, bool)`
+`func (o *ListInstancesResponseData) GetIpConfigOk() (*IpConfig2, bool)`
 
 GetIpConfigOk returns a tuple with the IpConfig field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetIpConfig
 
-`func (o *ListInstancesResponseData) SetIpConfig(v IpConfig1)`
+`func (o *ListInstancesResponseData) SetIpConfig(v IpConfig2)`
 
 SetIpConfig sets IpConfig field to given value.
 
@@ -642,6 +643,26 @@ SetDefaultUser sets DefaultUser field to given value.
 `func (o *ListInstancesResponseData) HasDefaultUser() bool`
 
 HasDefaultUser returns a boolean if a field has been set.
+
+### GetApplicationId
+
+`func (o *ListInstancesResponseData) GetApplicationId() string`
+
+GetApplicationId returns the ApplicationId field if non-nil, zero value otherwise.
+
+### GetApplicationIdOk
+
+`func (o *ListInstancesResponseData) GetApplicationIdOk() (*string, bool)`
+
+GetApplicationIdOk returns a tuple with the ApplicationId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetApplicationId
+
+`func (o *ListInstancesResponseData) SetApplicationId(v string)`
+
+SetApplicationId sets ApplicationId field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **EmailVerified** | **bool** | User email verification status. | 
 **Enabled** | **bool** | If uses is not enabled, he can&#39;t login and thus use services any longer. | 
 **Totp** | **bool** | Enable or disable two-factor authentication (2FA) via time based OTP. | 
-**Locale** | **string** | The locale of the user. This can be &#x60;de-DE&#x60;, &#x60;de&#x60;, &#x60;en-US&#x60;, &#x60;en&#x60; | 
+**Locale** | **string** | The locale of the user. This can be &#x60;de-DE&#x60;, &#x60;de&#x60;, &#x60;en-US&#x60;, &#x60;en&#x60;, &#x60;es-ES&#x60;, &#x60;es&#x60;, &#x60;pt-BR&#x60;, &#x60;pt&#x60;. | 
 **Roles** | [**[]RoleResponse**](RoleResponse.md) | The roles as list of &#x60;roleId&#x60;s of the user. | 
 **Owner** | **bool** | If user is owner he will have permissions to all API endpoints and resources. Enabling this will superseed all role definitions and &#x60;accessAllResources&#x60;. | 
 

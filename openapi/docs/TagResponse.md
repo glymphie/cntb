@@ -9,12 +9,13 @@ Name | Type | Description | Notes
 **TagId** | **int64** | Tag&#39;s id | 
 **Name** | **string** | Tag&#39;s name | 
 **Color** | **string** | Tag&#39;s color | 
+**Description** | **string** | The description of the Tag | 
 
 ## Methods
 
 ### NewTagResponse
 
-`func NewTagResponse(tenantId string, customerId string, tagId int64, name string, color string, ) *TagResponse`
+`func NewTagResponse(tenantId string, customerId string, tagId int64, name string, color string, description string, ) *TagResponse`
 
 NewTagResponse instantiates a new TagResponse object
 This constructor will assign default values to properties that have it defined,
@@ -127,6 +128,26 @@ and a boolean to check if the value has been set.
 `func (o *TagResponse) SetColor(v string)`
 
 SetColor sets Color field to given value.
+
+
+### GetDescription
+
+`func (o *TagResponse) GetDescription() string`
+
+GetDescription returns the Description field if non-nil, zero value otherwise.
+
+### GetDescriptionOk
+
+`func (o *TagResponse) GetDescriptionOk() (*string, bool)`
+
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDescription
+
+`func (o *TagResponse) SetDescription(v string)`
+
+SetDescription sets Description field to given value.
 
 
 

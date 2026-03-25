@@ -9,15 +9,15 @@ import (
 // generateCmd represents the generate command
 var UnassignInstanceCmd = &cobra.Command{
 	Use:   "unassign",
-	Short: "Remove instance from private network",
-	Long:  `Remove a specific instance from a specific private network using their ips`,
+	Short: "Remove instance from private network or firewall",
+	Long:  `Remove a specific instance from a specific private network using its ip or to a firewall using firewallId.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		cmd.Help()
 		os.Exit(0)
 	},
 	Args:       cobra.OnlyValidArgs,
 	SuggestFor: []string{"unassign", "remove", "removeInstance"},
-	ValidArgs:  []string{"privateNetwork"},
+	ValidArgs:  []string{"privateNetwork", "firewall"},
 }
 
 func init() {

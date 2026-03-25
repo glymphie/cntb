@@ -388,7 +388,7 @@ Name | Type | Description  | Notes
 
 ## RetrieveInstancesList
 
-> ListInstancesResponse RetrieveInstancesList(ctx).XRequestId(xRequestId).XTraceId(xTraceId).Page(page).Size(size).OrderBy(orderBy).Name(name).DisplayName(displayName).DataCenter(dataCenter).Region(region).InstanceId(instanceId).InstanceIds(instanceIds).Status(status).ProductIds(productIds).AddOnIds(addOnIds).ProductTypes(productTypes).IpConfig(ipConfig).Search(search).Execute()
+> ListInstancesResponse RetrieveInstancesList(ctx).XRequestId(xRequestId).XTraceId(xTraceId).Page(page).Size(size).OrderBy(orderBy).Name(name).DisplayName(displayName).DataCenter(dataCenter).Region(region).InstanceId(instanceId).InstanceIds(instanceIds).Status(status).ProductIds(productIds).AddOnIds(addOnIds).ProductTypes(productTypes).IpConfig(ipConfig).Search(search).CustomerId(customerId).TenantId(tenantId).Execute()
 
 List instances
 
@@ -424,10 +424,12 @@ func main() {
     productTypes := "ssd, hdd, nvme" // string | Comma separated instance's category depending on Product Id (optional)
     ipConfig := true // bool | Filter instances that have an ip config (optional)
     search := "vmd12345" // string | Full text search when listing the instances. Can be searched by `name`, `displayName`, `ipAddress` (optional)
+    customerId := "22223" // string | Filter by customer ID (optional)
+    tenantId := "DE" // string | Filter by tenant ID (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.InstancesApi.RetrieveInstancesList(context.Background()).XRequestId(xRequestId).XTraceId(xTraceId).Page(page).Size(size).OrderBy(orderBy).Name(name).DisplayName(displayName).DataCenter(dataCenter).Region(region).InstanceId(instanceId).InstanceIds(instanceIds).Status(status).ProductIds(productIds).AddOnIds(addOnIds).ProductTypes(productTypes).IpConfig(ipConfig).Search(search).Execute()
+    resp, r, err := api_client.InstancesApi.RetrieveInstancesList(context.Background()).XRequestId(xRequestId).XTraceId(xTraceId).Page(page).Size(size).OrderBy(orderBy).Name(name).DisplayName(displayName).DataCenter(dataCenter).Region(region).InstanceId(instanceId).InstanceIds(instanceIds).Status(status).ProductIds(productIds).AddOnIds(addOnIds).ProductTypes(productTypes).IpConfig(ipConfig).Search(search).CustomerId(customerId).TenantId(tenantId).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `InstancesApi.RetrieveInstancesList``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -465,6 +467,8 @@ Name | Type | Description  | Notes
  **productTypes** | **string** | Comma separated instance&#39;s category depending on Product Id | 
  **ipConfig** | **bool** | Filter instances that have an ip config | 
  **search** | **string** | Full text search when listing the instances. Can be searched by &#x60;name&#x60;, &#x60;displayName&#x60;, &#x60;ipAddress&#x60; | 
+ **customerId** | **string** | Filter by customer ID | 
+ **tenantId** | **string** | Filter by tenant ID | 
 
 ### Return type
 

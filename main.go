@@ -4,6 +4,7 @@ import (
 	"contabo.com/cli/cntb/cmd"
 	_ "contabo.com/cli/cntb/cmd/buckets"
 	_ "contabo.com/cli/cntb/cmd/datacenters"
+	_ "contabo.com/cli/cntb/cmd/firewalls"
 	_ "contabo.com/cli/cntb/cmd/images"
 	_ "contabo.com/cli/cntb/cmd/instanceActions"
 	_ "contabo.com/cli/cntb/cmd/instances"
