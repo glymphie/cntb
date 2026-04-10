@@ -16,7 +16,7 @@ import (
 var dnsListCmd = &cobra.Command{
 	Use:   "dns-zones",
 	Short: "list all your DNS zones",
-	Long:  `Retrieves information about all the DNS zones of the customer`,
+	Long:  `Retrieves a list of all the DNS zones of the customer`,
 	Run: func(cmd *cobra.Command, args []string) {
 		apiRetrieveDnsZonesListRequest := client.ApiClient().
 			DNSApi.RetrieveDnsZonesList(context.Background()).

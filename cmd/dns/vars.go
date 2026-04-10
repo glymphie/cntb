@@ -4,3 +4,8 @@ package cmd
 var (
 	getZoneName string
 )
+
+// list zone
+var (
+	dnsZoneName string
+)
