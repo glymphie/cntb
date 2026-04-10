@@ -27,8 +27,8 @@ var dnsGetCmd = &cobra.Command{
 		responseJson, _ := json.Marshal(resp.Data)
 
 		configFormatter := outputFormatter.FormatterConfig{
-			Filter:     []string{"name", "type", "data", "ttl"},
-			WideFilter: []string{"name", "type", "data", "ttl", "prio"},
+			Filter:     []string{"recordId", "name", "type", "ttl", "data"},
+			WideFilter: []string{"tenantId", "customerId", "recordId", "name", "type", "ttl", "prio", "data", "port", "weight", "flag", "tag"},
 			JsonPath:   contaboCmd.OutputFormatDetails,
 		}
 
