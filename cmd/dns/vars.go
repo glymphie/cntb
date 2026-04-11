@@ -2,12 +2,12 @@ package cmd
 
 // list zone
 var (
-	getZoneName string
+	getZoneName	string
 )
 
 // list zone records
 var (
-	getDnsRecordZoneName string
+	getDnsRecordZoneName	string
 )
 
 
@@ -23,4 +23,10 @@ var (
 	createDnsRecordWeight	float32
 	createDnsRecordFlag		float32
 	createDnsRecordTag		string
+)
+
+// delete dns record
+var (
+	deleteDnsRecordZoneName	string
+	deleteDnsRecordId		int64
 )

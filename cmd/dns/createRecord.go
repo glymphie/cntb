@@ -19,7 +19,7 @@ import (
 var dnsCreateRecordCmd = &cobra.Command{
 	Use:   "dns-record [zoneName]",
 	Short: "Create a DNS zone record",
-	Long:  `Create a DNS zone record based on flags or a json/yaml that is provided`,
+	Long:  `Create a DNS zone record based on flags or a json/yaml that is provided.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		createDnsZoneRecordRequest := dnsManagementClient.NewCreateDnsZoneRecordRequestWithDefaults()
 		content := contaboCmd.OpenStdinOrFile()
