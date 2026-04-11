@@ -30,3 +30,17 @@ var (
 	deleteDnsRecordZoneName	string
 	deleteDnsRecordId		int64
 )
+
+// update dns record
+var (
+	updateDnsRecordZoneName	string
+	updateDnsRecordId		int64
+	updateDnsRecordType		string
+	updateDnsRecordTTL		float32
+	updateDnsRecordPrio		float32
+	updateDnsRecordData		string
+	updateDnsRecordPort		float32
+	updateDnsRecordWeight	float32
+	updateDnsRecordFlag		float32
+	updateDnsRecordTag		string
+)
