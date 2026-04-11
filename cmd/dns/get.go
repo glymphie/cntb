@@ -19,13 +19,13 @@ var dnsGetCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		httpResp, err := client.ApiClient().
 			DNSApi.
-			RetrieveDnsZone(context.Background(), dnsZoneName).
+			RetrieveDnsZone(context.Background(), getZoneName).
 			XRequestId(uuid.NewV4().String()).
 			Execute()
 
 		util.HandleErrors(err, httpResp, "while retrieving DNS zone")
 
-		fmt.Println(dnsZoneName)
+		fmt.Println(getZoneName)
 	},
 	Args: func(cmd *cobra.Command, args []string) error {
 		contaboCmd.ValidateOutputFormat()
@@ -34,7 +34,7 @@ var dnsGetCmd = &cobra.Command{
 			cmd.Help()
 			log.Fatal("Please provide exactly one zone name.")
 		}
-		dnsZoneName = args[0]
+		getZoneName = args[0]
 
 		return nil
 	},

@@ -19,7 +19,7 @@ var dnsGetRecordsCmd = &cobra.Command{
 	Long:  "Retrieves DNS records for a DNS zone",
 	Run: func(cmd *cobra.Command, args []string) {
 		resp, httpResp, err := client.ApiClient().
-			DNSApi.RetrieveDnsZoneRecordsList(context.Background(), getZoneName).
+			DNSApi.RetrieveDnsZoneRecordsList(context.Background(), getDnsRecordZoneName).
 			XRequestId(uuid.NewV4().String()).Execute()
 
 		util.HandleErrors(err, httpResp, "while retrieving DNS zone records")
@@ -45,7 +45,7 @@ var dnsGetRecordsCmd = &cobra.Command{
 			cmd.Help()
 			log.Fatal("Please provide exactly one zone name.")
 		}
-		getZoneName = args[0]
+		getDnsRecordZoneName = args[0]
 
 		return nil
 	},

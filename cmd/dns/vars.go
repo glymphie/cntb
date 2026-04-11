@@ -1,11 +1,26 @@
 package cmd
 
-// list zone records
+// list zone
 var (
 	getZoneName string
 )
 
-// list zone
+// list zone records
 var (
-	dnsZoneName string
+	getDnsRecordZoneName string
+)
+
+
+// create dns record
+var (
+	createDnsRecordZoneName	string
+	createDnsRecordName		string
+	createDnsRecordType		string
+	createDnsRecordTTL		float32
+	createDnsRecordPrio		float32
+	createDnsRecordData		string
+	createDnsRecordPort		float32
+	createDnsRecordWeight	float32
+	createDnsRecordFlag		float32
+	createDnsRecordTag		string
 )
