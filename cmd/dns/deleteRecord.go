@@ -36,13 +36,12 @@ var dnsDeleteRecordCmd = &cobra.Command{
 			log.Fatal("Please provide a zoneName and recordId.")
 		}
 
-		deleteDnsRecordZoneName = args[0]
-
 		recordId, err := strconv.ParseInt(args[1], 10, 64)
 		if err != nil {
 			log.Fatal(fmt.Sprintf("Provided recordId %v is not valid.", args[1]))
 		}
 
+		deleteDnsRecordZoneName = args[0]
 		deleteDnsRecordId = recordId
 
 		return nil

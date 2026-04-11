@@ -77,8 +77,6 @@ var dnsCreateRecordCmd = &cobra.Command{
 			log.Fatal("Please provide exactly one zone name.")
 		}
 
-		createDnsRecordZoneName = args[0]
-
 		viper.BindPFlag("name", cmd.Flags().Lookup("name"))
 		createDnsRecordName = viper.GetString("name")
 
@@ -116,6 +114,8 @@ var dnsCreateRecordCmd = &cobra.Command{
 				log.Fatal("Argument data is empty. Please provide one.")
 			}
 		}
+
+		createDnsRecordZoneName = args[0]
 
 		return nil
 	},
