@@ -17,8 +17,7 @@ var dnsGetCmd = &cobra.Command{
 	Short: "check if a DNS zone exists",
 	Long:  `Checks whether a DNS zone exists for a customer.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		httpResp, err := client.ApiClient().
-			DNSApi.
+		httpResp, err := client.ApiClient().DNSApi.
 			RetrieveDnsZone(context.Background(), getZoneName).
 			XRequestId(uuid.NewV4().String()).
 			Execute()

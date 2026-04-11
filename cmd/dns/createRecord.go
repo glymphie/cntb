@@ -63,7 +63,8 @@ var dnsCreateRecordCmd = &cobra.Command{
 		resp, httpResp, err := client.ApiClient().
 			DNSApi.CreateDnsZoneRecord(context.Background(), createDnsRecordZoneName).
 			XRequestId(uuid.NewV4().String()).
-			CreateDnsZoneRecordRequest(*createDnsZoneRecordRequest).Execute()
+			CreateDnsZoneRecordRequest(*createDnsZoneRecordRequest).
+			Execute()
 
 		util.HandleErrors(err, httpResp, "while creating DNS zone record")
 

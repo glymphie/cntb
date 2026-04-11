@@ -111,8 +111,6 @@ var dnsUpdateRecordCmd = &cobra.Command{
 		if err != nil { log.Fatal(fmt.Sprintf("Provided recordId %v is not valid.", args[1]))
 		}
 
-		updateDnsRecordId = recordId
-
 		viper.BindPFlag("type", cmd.Flags().Lookup("type"))
 		updateDnsRecordType = viper.GetString("type")
 
@@ -138,6 +136,7 @@ var dnsUpdateRecordCmd = &cobra.Command{
 		updateDnsRecordTag = viper.GetString("tag")
 
 		updateDnsRecordZoneName = args[0]
+		updateDnsRecordId = recordId
 
 		return nil
 	},

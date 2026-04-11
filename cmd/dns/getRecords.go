@@ -16,11 +16,16 @@ import (
 var dnsGetRecordsCmd = &cobra.Command{
 	Use:   "dns-records [zoneName]",
 	Short: "list DNS records for a zone",
-	Long:  "Retrieves DNS records for a DNS zone.",
+	Long:  `Retrieves DNS records for a DNS zone.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		resp, httpResp, err := client.ApiClient().
+		apiRetrieveDnsZoneRecordsListRequest := client.ApiClient().
 			DNSApi.RetrieveDnsZoneRecordsList(context.Background(), getDnsRecordZoneName).
-			XRequestId(uuid.NewV4().String()).Execute()
+			XRequestId(uuid.NewV4().String()).
+			Page(contaboCmd.Page).
+			Size(contaboCmd.Size).
+			OrderBy([]string{contaboCmd.OrderBy})
+
+		resp, httpResp, err := apiRetrieveDnsZoneRecordsListRequest.Execute()
 
 		util.HandleErrors(err, httpResp, "while retrieving DNS zone records")
 

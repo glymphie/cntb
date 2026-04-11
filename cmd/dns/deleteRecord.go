@@ -20,7 +20,8 @@ var dnsDeleteRecordCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		httpResp, err := client.ApiClient().DNSApi.
 			DeleteDnsZoneRecord(context.Background(), deleteDnsRecordId, deleteDnsRecordZoneName).
-			XRequestId(uuid.NewV4().String()).Execute()
+			XRequestId(uuid.NewV4().String()).
+			Execute()
 
 		util.HandleErrors(err, httpResp, "while deleting DNS zone record")
 	},
