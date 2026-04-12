@@ -66,5 +66,11 @@ var (
 
 // delete ptr record
 var (
-	deletePtrRecordIpAddress string
+	deletePtrRecordIpAddress	string
+)
+
+// update ptr record
+var (
+	updatePtrRecordIpAddress	string
+	updatePtrRecordPtr			string
 )
