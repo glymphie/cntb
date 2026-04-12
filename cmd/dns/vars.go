@@ -63,3 +63,8 @@ var (
 	createPtrRecordPtr	string
 	createPtrRecordTTL	int64
 )
+
+// delete ptr record
+var (
+	deletePtrRecordIpAddress string
+)
