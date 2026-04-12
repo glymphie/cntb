@@ -54,5 +54,12 @@ var (
 
 // get ptr record
 var (
-	getPtrRecordIpAddress string
+	getPtrRecordIpAddress	string
+)
+
+// create ptr record
+var (
+	createPtrRecordIp	string
+	createPtrRecordPtr	string
+	createPtrRecordTTL	int64
 )
