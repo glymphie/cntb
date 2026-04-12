@@ -126,29 +126,29 @@ func init() {
 	contaboCmd.CreateCmd.AddCommand(dnsCreateRecordCmd)
 
 	dnsCreateRecordCmd.Flags().StringVar(&createDnsRecordName, "name", "",
-	`record name`)
+		`record name`)
 
 	dnsCreateRecordCmd.Flags().StringVar(&createDnsRecordType, "type", "",
-	`record type, e.g. A, AAAA, CAA, CNAME, MX, SRV, TXT`)
+		`record type, e.g. A, AAAA, CAA, CNAME, MX, SRV, TXT`)
 
 	dnsCreateRecordCmd.Flags().Float32Var(&createDnsRecordTTL, "ttl", 86400,
-	`TTL of the DNS record`)
+		`TTL of the DNS record`)
 
 	dnsCreateRecordCmd.Flags().Float32Var(&createDnsRecordPrio, "prio", 0,
-	`priority of the DNS record`)
+		`priority of the DNS record`)
 
 	dnsCreateRecordCmd.Flags().StringVar(&createDnsRecordData, "data", "",
-	`record data/content`)
+		`record data/content`)
 
 	dnsCreateRecordCmd.Flags().Float32Var(&createDnsRecordPort, "port", 0,
-	`port for records that support it`)
+		`port for records that support it`)
 
 	dnsCreateRecordCmd.Flags().Float32Var(&createDnsRecordWeight, "weight", 0,
-	`weight for records that support it`)
+		`weight for records that support it`)
 
 	dnsCreateRecordCmd.Flags().Float32Var(&createDnsRecordFlag, "flag", 0,
-	`flag for records that support it`)
+		`flag for records that support it`)
 
 	dnsCreateRecordCmd.Flags().StringVar(&createDnsRecordTag, "tag", "",
-	`tag for records that support it`)
+		`tag for records that support it`)
 }
