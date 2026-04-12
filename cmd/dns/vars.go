@@ -51,3 +51,8 @@ var (
 	listPtrRecordTenantIdFilter		string
 	listPtrRecordIpsFilter			[]string
 )
+
+// get ptr record
+var (
+	getPtrRecordIpAddress string
+)
