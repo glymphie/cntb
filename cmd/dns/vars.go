@@ -1,13 +1,13 @@
 package cmd
 
-// list zone
+// get zone
 var (
 	getZoneName	string
 )
 
 // list zone records
 var (
-	getDnsRecordZoneName	string
+	listDnsRecordZoneName	string
 )
 
 
@@ -43,4 +43,11 @@ var (
 	updateDnsRecordWeight	float32
 	updateDnsRecordFlag		float32
 	updateDnsRecordTag		string
+)
+
+// list ptr records
+var (
+	listPtrRecordCustomerIdFilter	string
+	listPtrRecordTenantIdFilter		string
+	listPtrRecordIpsFilter			[]string
 )
